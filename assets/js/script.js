@@ -14,7 +14,8 @@ const makePostRequest = async (data, endpoint, callback) => {
     try {
     	const response = await sent.json()
         callback(response)
-        console.log(response)
+        console.log("Error", response.msg)
+        console.log("Success", response.text)
     } catch (error) {
         console.log(error)
         callback(error)
@@ -34,15 +35,14 @@ messageForm.addEventListener('submit', (e) => {
     container.appendChild(me)
     messageForm.reset();
     
-    let data = {
+    const data = {
         message, 
-        key: "288101"
+        key: "OPEN_AI_API_KEY"
     }
-    
-    makePostRequest(data, 'https://kei.lowkeydevs.repl.co/api/gptAPI', (res) => {
+    makePostRequest(data, 'https://gpt-api.libyzxy0-edu.repl.co/gpt3-5-turbo', (res) => {
       let her = document.createElement('li');
       her.setAttribute('class', 'herchat');
-      her.textContent = res.response;
+      her.textContent = res.text;
       container.appendChild(her)
     })    
 })
