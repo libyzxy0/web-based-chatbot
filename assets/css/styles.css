@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Mynerve&family=Rubik:wght@300&family=Shantell+Sans:wght@300&family=Ubuntu:wght@300&display=swap');
+
+/*
+font-family: 'Mynerve', cursive;
+font-family: 'Rubik', sans-serif;
+font-family: 'Shantell Sans', cursive;
+font-family: 'Ubuntu', sans-serif;
+*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #222831;
+}
+nav {
+    position: fixed;
+    top: 0;
+    height: 2.5rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: #222831;
+    z-index: 4;
+}
+nav img {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    margin-left: 1rem;
+    border: 1px solid #4285f4;
+}
+nav button {
+  border: 1.4px solid #4285f4;
+  border-radius: 7px;
+  background: transparent;
+  height: 1.8rem;
+  width: 4.8rem;
+  color: #ffffff;
+  transition: 0.4s;
+  font-family: 'Rubik', cursive;
+  display: none;
+}
+nav button:hover {
+  background-color: #4285f4;
+  color: white;
+}
+nav ion-icon {
+   margin-right: 1rem; 
+   color: #ffffff;
+   font-size: 19px;
+   transition: 0.4s;
+} 
+nav ion-icon:hover {
+  color: #4285f4;
+}    
+.message_input_box form {
+    position: fixed;
+    bottom: 0;
+    height: 3.5rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: #232a35;
+    z-index: 5;
+}
+.message_input_box form input {
+    border: none;
+    outline: none;
+    height: 2.2rem;
+    width: 16rem;
+    padding: 0 1rem;
+    background-color: #222831;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    font-family: 'Rubik', cursive;
+    font-size: 15px;
+    color: #ffffff;
+    margin-left: 1rem;
+}
+.message_input_box button {
+    border-radius: 7px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+    align-items: center;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    transition: 0.3s;
+}
+.message_input_box li {
+    border-radius: 7px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+    align-items: center;
+    margin-left: 1rem;
+    transition: 0.3s;
+    list-style-type: none;
+    font-size: 23px;
+    color: #ffffff;
+    transition: 0.3s;
+  }
+.message_input_box button ion-icon:hover, .message_input_box li ion-icon:hover {
+  color: #4285f4;
+}
+.message_input_box button ion-icon {
+    color: #ffffff;
+    font-size: 23px;
+    transition: 0.3s;
+}
+.messages-body {
+    padding: 1rem 0;
+    list-style: none;
+    top: 0;
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: scroll;
+    flex: 1;
+    height: calc(94vh - 4rem);
+    overflow-x: hidden;
+    overflow-y: auto;
+    z-index: 1;
+    margin-top: 2.5rem;
+    display: none;
+    margin-bottom: 2.5rem;
+}
+.messages-body .mychat {
+    background: #4285f4;
+    color: #fff;
+    width: auto;
+    margin: 5px;
+    padding: 10px 20px 10px 20px;
+    border-radius: 30px 30px 0px 30px;
+    clear: both;
+    float: right;
+    position: relative;
+    overflow-wrap: break-word;
+    word-break: break-all;
+    max-width: 80vw;
+    hyphens: auto;
+    -webkit-user-select: all;
+    -ms-user-select: all;
+    user-select:all;
+    font-family: 'Shantell Sans', cursive;
+}
+
+.messages-body .herchat {
+    background: #1a1f27;
+    width: auto;
+    margin: 5px;
+    padding: 10px 20px 10px 20px;
+    color: white;
+    border-radius: 0 30px 30px 30px;
+    clear: both;
+    float: left;
+    position: relative;
+    overflow-wrap: break-word;
+    word-break: break-all;
+    max-width: 80vw;
+    hyphens: auto;
+    -webkit-user-select: auto;
+    -ms-user-select: auto;
+    user-select:auto;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.banner {
+    text-align: center;
+    margin: 5rem 1.5rem;
+}
+.banner h1 {
+    color: #6ae0ff;
+    font-family: 'Ubuntu', sans-serif;
+    padding-top: 3rem;
+}
+.banner p {
+    color: #ffffff;
+    font-family: 'Shantell Sans', cursive;
+    margin-top: 1rem;
+}
+
+.unselectable {
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -khtml-user-select: none; 
+    -webkit-tap-highlight-color: transparent;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #222831;
+    height: 14rem;
+    width: 8rem;
+    border-radius: 0px 0px 0px 12px;
+    z-index: 6;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: none;
+}
+
+.menu h1 {
+    color: #ffffff;
+    font-size: 18px;
+    font-family: 'Rubik', sans-serif;
+    margin: 0.4rem 0.4rem;
+}
