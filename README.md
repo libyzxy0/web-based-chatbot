@@ -7,5 +7,39 @@
 ### Code for backend (Node.js)
 
 ```javascript
-console.log("Pogi ko");
+const express = require("express");
+const app = express();
+const cors = require("cors");
+const { Configuration, OpenAIApi } = require('openai');
+
+app.use(cors())
+app.use(express.json())
+app.use(express.urlencoded({extended: true }))
+
+app.post('/gpt3-5-turbo', (req, res) => {
+  if(!req.body) {
+    res.send({ msg: "error" })
+    console.log("An error occurred!")
+ } else {
+  let { message, key } = req.body;
+  const configuration = new Configuration({
+  apiKey: key,
+});
+  const openai = new OpenAIApi(configuration);
+  async function openaiCompletion(txt) {
+    const completion = await openai.createChatCompletion({
+        model: "gpt-3.5-turbo",
+        messages: [{ role: "user", content: txt }],
+    });
+    return completion.data.choices[0].message['content']
+  } 
+  openaiCompletion(message).then((response) => {
+    res.send({ text: response })
+    console.log(response)
+  })
+   } 
+})
+
+const port = 3000 || process.env.PORT;
+app.listen(port, () => console.log(`App is listening on port ${port}`))
 ```
