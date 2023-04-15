@@ -3,25 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Qr Code Generator | libyzxy0</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Kei Sy</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
-<body>
-    <div class="container">
-        <h1 class="title">Qr Code Generator</h1>
-        <div class="card">
-            <div class="input-card">
-                <form id="form">
-                  <input type="text" name="Text" id="text">
-                  <button>Generate</button>  
-                </form>
-            </div>
-            <div class="qr-container">
-                <img src="https://http.cat/404" id="image">
-            </div>
-        </div>
-        <div class="copyright"><p>© Copyright 2023 libyzxy0, All Rights Reserved.</p></div>
+<body class="unselectable">
+    <div id="menu" class="menu">
+        <h1 id="menu-close">Menu</h1>
+        
     </div>
-    <script src="script.js"></script>
+    <nav>
+        <img src="" alt="Profile">
+        <button onclick="window.location.href='/chat'" id="new-chat">New Chat</button>
+        <ion-icon id="menuBtn" name="grid-outline"></ion-icon>
+    </nav>
+    <div class="banner">
+        <h1>Hello, welcome user!</h1>
+        <p>Just type a message to start our conversation!</p>
+        <img src="./assets/image/thumbnail.png" alt="Thumbnail" width="300" style="margin-top: 2rem;border-radius: 12px;">
+        <p>Created by <a href="https://libyzxy-0.firebaseapp.com" style="text-decoration: none; color: #6ae0ff;">libyzxy0</a></p>
+    </div>
+    <div class="messages-body" id="messages-body"></div>
+    <div class="message_input_box">
+        <form id="messageForm">
+            <input type="text" placeholder="Type your message." id="message" autocomplete="off" required>
+           <li id="voice"><ion-icon name="mic-outline"></ion-icon></li>
+           <button type="submit"><ion-icon name="paper-plane-outline"></ion-icon></button>
+        </form>
+    </div>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+<script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+<script src="./assets/js/script.js"></script>
 </body>
 </html>
