@@ -1,7 +1,7 @@
 /*
 * © Copyright 2023 libyzxy0, All Rights Reserved.
 * Please put a credits if you copy this code!
-* LICENSE ''
+* You can see the LICENSE here 'https://github.com/libyzxy0/web-based-chatbot/blob/main/LICENSE'
 */
 
 let messageForm = document.getElementById('messageForm');
