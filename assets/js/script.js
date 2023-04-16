@@ -42,7 +42,7 @@ messageForm.addEventListener('submit', (e) => {
     
     const data = {
         message, 
-        key: "OPEN_AI_API_KEY"
+        key: "sk- CjJuK7r1UWiTBBQZFUMET3B1bKFJX2X7kwX5y3B3yIyU8vXM"
     }
     makePostRequest(data, 'https://gpt-api.libyzxy0-edu.repl.co/gpt3-5-turbo', (res) => {
       let her = document.createElement('li');
