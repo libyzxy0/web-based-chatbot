@@ -22,6 +22,8 @@ app.post('/gpt3-5-turbo', (req, res) => {
     console.log("An error occurred!")
  } else {
   let { message, key } = req.body;
+  let teach = ""; //Teach her on what he response!
+
   const configuration = new Configuration({
   apiKey: key,
 });
@@ -33,7 +35,7 @@ app.post('/gpt3-5-turbo', (req, res) => {
     });
     return completion.data.choices[0].message['content']
   } 
-  openaiCompletion(message).then((response) => {
+  openaiCompletion(`${teach} ${message}`).then((response) => {
     res.send({ text: response })
     console.log(response)
   })
