@@ -43,3 +43,13 @@ app.post('/gpt3-5-turbo', (req, res) => {
 const port = 3000 || process.env.PORT;
 app.listen(port, () => console.log(`App is listening on port ${port}`))
 ```
+### Inserting an apikey
+```javascript 
+const data = {
+        message, 
+        key: "OPEN_AI_API_KEY"
+    }
+```
+
+##### You can insert your apikey in line 40 'assets/js/script.js'
+
