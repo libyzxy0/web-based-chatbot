@@ -46,8 +46,8 @@ app.listen(port, () => console.log(`App is listening on port ${port}`))
 ### Inserting an apikey
 ```javascript 
 const data = {
-        message, 
-        key: "OPEN_AI_API_KEY"
+  message, 
+  key: "OPEN_AI_API_KEY"
 }
 ```
 
