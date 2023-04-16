@@ -1,7 +1,12 @@
+/*
+* © Copyright 2023 libyzxy0, All Rights Reserved.
+* Please put a credits if you copy this code!
+* LICENSE ''
+*/
+
 let messageForm = document.getElementById('messageForm');
 let container = document.getElementById('messages-body');
 let banner = document.querySelector('.banner');
-
 
 const makePostRequest = async (data, endpoint, callback) => {
 	const sent = await fetch(endpoint, {
